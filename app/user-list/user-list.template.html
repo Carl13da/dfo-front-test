@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <p>
+        Search By Name:
+        <input ng-model="$ctrl.query" />
+      </p>
+      <button type="button" class="btn btn-primary" ng-click="$ctrl.search()">
+        Search
+      </button>
+      <a href="#!/users/add"
+        ><button type="button" class="btn btn-primary">Add User</button></a
+      >
+    </div>
+    <div class="col-md-10">
+      <ul class="list-group list-group-flush">
+        <li ng-repeat="user in $ctrl.users.data" class="list-group-item">
+          <p>{{user.name}} - {{user.age}} - {{user.address}}</p>
+          <p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              ng-click="$ctrl.selectUser(user)"
+            >
+              {{ !user.selected ? 'Update' : 'Cancel' }}
+            </button>
+          </p>
+
+          <div ng-if="user.selected">
+            <p>
+              <input ng-model="user.name" />
+              <input ng-model="user.age" />
+              <input ng-model="user.address" />
+            </p>
+
+            <p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                ng-click="$ctrl.update(user)"
+              >
+                Save
+              </button>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
