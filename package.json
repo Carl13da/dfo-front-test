@@ -11,18 +11,31 @@
     "angular-resource": "1.8.x",
     "angular-route": "1.8.x",
     "bootstrap": "3.3.x",
-    "jquery": "3.3.x"
+    "browser-sync": "^2.26.13",
+    "gulp-eslint": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "jquery": "3.3.x",
+    "webpack": "^5.2.0"
   },
   "devDependencies": {
     "angular-mocks": "1.8.x",
     "cpx": "^1.5.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.5.0",
     "karma": "^3.1.4",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.3.0",
     "karma-jasmine": "^1.1.2",
-    "protractor": "^5.4.4"
+    "protractor": "^5.4.4",
+    "run-sequence": "^2.2.1"
   },
   "scripts": {
     "postinstall": "npm run copy-libs",
